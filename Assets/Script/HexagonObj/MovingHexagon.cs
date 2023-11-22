@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,17 +25,24 @@ public class MovingHexagon : MonoBehaviour
         }
     }
 
-    //private void OnValidate()
-    //{
-    //    hexagonSR = GetComponent<SpriteRenderer>();
-    //    directionArrow = this.transform.GetChild(0);
-    //    hexagonSR.sprite = GameObject.FindObjectOfType<ObjManager>().hexagonColors[(int)objectColor];
-    //    directionArrow.localRotation = Quaternion.Euler(0, 0, (int)moveDirection * 60);
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Rotate"))
+        {
+            MoveDirection moveDirection = collision.GetComponent<RotateArrow>().GetRotateDirection();
+            directionArrow.DORotate(new Vector3(0, 0, (int)moveDirection * 60), .5f)
+                .SetEase(Ease.OutBack);
+            SetMoveDirection(moveDirection);
+        }
+    }
 
     public void SetMoveDirection(MoveDirection moveDirection)
     {
         this.moveDirection = moveDirection;
+    }
+
+    public void RotateArrow()
+    {
         directionArrow.localRotation = Quaternion.Euler(0, 0, (int)moveDirection * 60);
     }
 

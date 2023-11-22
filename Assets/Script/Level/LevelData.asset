@@ -20,6 +20,7 @@ MonoBehaviour:
         spawnPosition: {x: 1, y: 0, z: 0}
       - moveDirection: 0
         spawnPosition: {x: -1, y: 0, z: 0}
+    arrows: []
     time: 15
   - hexagonTypes:
     - color: 1
@@ -36,6 +37,7 @@ MonoBehaviour:
         spawnPosition: {x: 1, y: 0, z: 0}
       - moveDirection: 3
         spawnPosition: {x: 2, y: 0, z: 0}
+    arrows: []
     time: 20
   - hexagonTypes:
     - color: 0
@@ -50,6 +52,7 @@ MonoBehaviour:
         spawnPosition: {x: -1, y: 2, z: 0}
       - moveDirection: 4
         spawnPosition: {x: 0, y: 1, z: 0}
+    arrows: []
     time: 25
   - hexagonTypes:
     - color: 3
@@ -64,7 +67,8 @@ MonoBehaviour:
         spawnPosition: {x: 0, y: 1, z: 0}
       - moveDirection: 4
         spawnPosition: {x: 1, y: 1, z: 0}
-    time: 25
+    arrows: []
+    time: 20
   - hexagonTypes:
     - color: 5
       hexagons:
@@ -82,25 +86,199 @@ MonoBehaviour:
         spawnPosition: {x: 0, y: 0, z: 0}
       - moveDirection: 4
         spawnPosition: {x: 1, y: 0, z: 0}
-    time: 25
+    arrows: []
+    time: 20
+  - hexagonTypes:
+    - color: 2
+      hexagons:
+      - moveDirection: 0
+        spawnPosition: {x: -1, y: 0, z: 0}
+      - moveDirection: 1
+        spawnPosition: {x: -1, y: -2, z: 0}
+      - moveDirection: 2
+        spawnPosition: {x: 0, y: -1, z: 0}
+    - color: 5
+      hexagons:
+      - moveDirection: 2
+        spawnPosition: {x: -1, y: -1, z: 0}
+      - moveDirection: 1
+        spawnPosition: {x: 0, y: 0, z: 0}
+    arrows: []
+    time: 20
+  - hexagonTypes:
+    - color: 2
+      hexagons:
+      - moveDirection: 2
+        spawnPosition: {x: 0, y: 0, z: 0}
+      - moveDirection: 5
+        spawnPosition: {x: 0, y: 1, z: 0}
+    - color: 1
+      hexagons:
+      - moveDirection: 5
+        spawnPosition: {x: -2, y: 1, z: 0}
+      - moveDirection: 0
+        spawnPosition: {x: -1, y: 1, z: 0}
+    arrows:
+    - moveDirection: 3
+      spawnPosition: {x: 1, y: 1, z: 5}
+    time: 20
+  - hexagonTypes:
+    - color: 0
+      hexagons:
+      - moveDirection: 2
+        spawnPosition: {x: 0, y: 0, z: 0}
+      - moveDirection: 2
+        spawnPosition: {x: -1, y: 0, z: 0}
+    - color: 5
+      hexagons:
+      - moveDirection: 3
+        spawnPosition: {x: 0, y: 1, z: 0}
+      - moveDirection: 2
+        spawnPosition: {x: 1, y: 0, z: 0}
+    arrows:
+    - moveDirection: 0
+      spawnPosition: {x: -1, y: 1, z: 5}
+    time: 20
+  - hexagonTypes:
+    - color: 3
+      hexagons:
+      - moveDirection: 1
+        spawnPosition: {x: 0, y: 1, z: 0}
+      - moveDirection: 0
+        spawnPosition: {x: -1, y: 0, z: 0}
+    - color: 2
+      hexagons:
+      - moveDirection: 3
+        spawnPosition: {x: 1, y: 1, z: 0}
+      - moveDirection: 2
+        spawnPosition: {x: 0, y: -1, z: 0}
+    arrows:
+    - moveDirection: 1
+      spawnPosition: {x: 0, y: 0, z: 5}
+    time: 20
   - hexagonTypes:
     - color: 0
       hexagons:
       - moveDirection: 0
+        spawnPosition: {x: 1, y: 0, z: 0}
+      - moveDirection: 1
+        spawnPosition: {x: 1, y: -1, z: 0}
+      - moveDirection: 1
+        spawnPosition: {x: 0, y: -2, z: 0}
+    - color: 3
+      hexagons:
+      - moveDirection: 1
         spawnPosition: {x: 0, y: 0, z: 0}
       - moveDirection: 0
+        spawnPosition: {x: -1, y: 1, z: 0}
+      - moveDirection: 3
+        spawnPosition: {x: 0, y: -1, z: 0}
+    arrows:
+    - moveDirection: 3
+      spawnPosition: {x: 2, y: 0, z: 5}
+    time: 25
+  - hexagonTypes:
+    - color: 3
+      hexagons:
+      - moveDirection: 0
         spawnPosition: {x: 0, y: 0, z: 0}
+      - moveDirection: 0
+        spawnPosition: {x: 1, y: 0, z: 0}
     - color: 0
-      hexagons: []
+      hexagons:
+      - moveDirection: 1
+        spawnPosition: {x: 0, y: -1, z: 0}
+      - moveDirection: 0
+        spawnPosition: {x: -1, y: 1, z: 0}
+    - color: 2
+      hexagons:
+      - moveDirection: 0
+        spawnPosition: {x: 1, y: -1, z: 0}
+      - moveDirection: 3
+        spawnPosition: {x: 2, y: 0, z: 0}
+    arrows:
+    - moveDirection: 4
+      spawnPosition: {x: 1, y: 0, z: 5}
+    time: 30
+  - hexagonTypes:
+    - color: 3
+      hexagons:
+      - moveDirection: 2
+        spawnPosition: {x: 0, y: 0, z: 0}
+      - moveDirection: 4
+        spawnPosition: {x: -1, y: 1, z: 0}
+      - moveDirection: 5
+        spawnPosition: {x: -2, y: 0, z: 0}
+    - color: 1
+      hexagons:
+      - moveDirection: 5
+        spawnPosition: {x: -2, y: 1, z: 0}
+      - moveDirection: 3
+        spawnPosition: {x: 0, y: 1, z: 0}
+    - color: 5
+      hexagons:
+      - moveDirection: 3
+        spawnPosition: {x: 1, y: 0, z: 0}
+      - moveDirection: 3
+        spawnPosition: {x: -1, y: -1, z: 0}
+    arrows:
+    - moveDirection: 1
+      spawnPosition: {x: -2, y: -1, z: 5}
+    time: 30
+  - hexagonTypes:
+    - color: 1
+      hexagons:
+      - moveDirection: 0
+        spawnPosition: {x: -1, y: -1, z: 0}
+      - moveDirection: 2
+        spawnPosition: {x: 0, y: -1, z: 0}
+      - moveDirection: 4
+        spawnPosition: {x: 2, y: 0, z: 0}
+    - color: 2
+      hexagons:
+      - moveDirection: 3
+        spawnPosition: {x: 1, y: 0, z: 0}
+      - moveDirection: 5
+        spawnPosition: {x: -2, y: 1, z: 0}
+      - moveDirection: 2
+        spawnPosition: {x: 0, y: -2, z: 0}
     - color: 0
-      hexagons: []
-    time: 0
-  - hexagonTypes: []
-    time: 0
-  - hexagonTypes: []
-    time: 0
-  - hexagonTypes: []
-    time: 0
-  - hexagonTypes: []
-    time: 0
+      hexagons:
+      - moveDirection: 5
+        spawnPosition: {x: -1, y: 1, z: 0}
+      - moveDirection: 0
+        spawnPosition: {x: -2, y: 0, z: 0}
+      - moveDirection: 2
+        spawnPosition: {x: 1, y: -1, z: 0}
+    arrows:
+    - moveDirection: 0
+      spawnPosition: {x: 0, y: 0, z: 5}
+    time: 40
+  - hexagonTypes:
+    - color: 0
+      hexagons:
+      - moveDirection: 1
+        spawnPosition: {x: 0, y: -1, z: 0}
+      - moveDirection: 1
+        spawnPosition: {x: -1, y: -2, z: 0}
+    - color: 3
+      hexagons:
+      - moveDirection: 3
+        spawnPosition: {x: 1, y: 0, z: 0}
+      - moveDirection: 4
+        spawnPosition: {x: 0, y: 2, z: 0}
+    - color: 2
+      hexagons:
+      - moveDirection: 1
+        spawnPosition: {x: -1, y: -1, z: 0}
+      - moveDirection: 3
+        spawnPosition: {x: 1, y: -1, z: 0}
+      - moveDirection: 3
+        spawnPosition: {x: 1, y: 1, z: 0}
+    arrows:
+    - moveDirection: 3
+      spawnPosition: {x: 0, y: 0, z: 5}
+    - moveDirection: 0
+      spawnPosition: {x: -1, y: 0, z: 5}
+    time: 45
   currentLevelIndex: 0

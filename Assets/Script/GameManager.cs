@@ -40,12 +40,13 @@ public class GameManager : MonoBehaviour
 
     private void PrepareLevel()
     {
-        currentLevelData = LevelManager.instance.levelData.GetLevelAt(LevelManager.instance.currentLevelIndex);
-
+        LevelManager.instance.levelData.SetCurrentLevelIndex(LevelManager.instance.currentLevelIndex);
+        currentLevelData = LevelManager.instance.levelData.GetLevelAt(LevelManager.instance.levelData.GetCurrentLevelIndex());
         timeLeft = currentLevelData.time;
         gameScene.UpdateTimeLeftText(timeLeft);
 
         InitHexagons(currentLevelData.hexagonTypes);
+        InitRotateArrow(currentLevelData.arrows);
     }
 
     private void InitHexagons(HexagonType[] hexagonTypes)
@@ -63,11 +64,25 @@ public class GameManager : MonoBehaviour
 
                 MovingHexagon movingHexagon = initializedHexagon.GetComponent<MovingHexagon>();
                 movingHexagon.SetMoveDirection(hexagon.moveDirection);
+                movingHexagon.RotateArrow();
                 movingHexagon.SetObjectColor(hexagonType.color);
             }
         }
 
         ObjManager.instance.SetPosList();
+    }
+
+    private void InitRotateArrow(Arrow[] arrows)
+    {
+        if(arrows.Length > 0)
+        {
+            foreach(Arrow arrow in arrows)
+            {
+                GameObject initializedArrow = Instantiate(ObjManager.instance.rotateArrowPrefab);
+                initializedArrow.transform.position = GridCellManager.instance.PositonToMove(arrow.spawnPosition);
+                initializedArrow.GetComponent<RotateArrow>().SetRotateDirection(arrow.moveDirection);
+            }
+        }
     }
 
     private void Update()

@@ -6698,6 +6698,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3c9532bb3799161419e772ad3529e31e, type: 3}
   - {fileID: 21300000, guid: 73c2917f79ba9d343bd59b7093a4b63b, type: 3}
   - {fileID: 21300000, guid: 0d81b32100ef8d246b7a6d81e160cbd2, type: 3}
+  rotateArrowPrefab: {fileID: 704319616718627427, guid: a5e9f41c9f9d75b4aad18998ee4fa781, type: 3}
 --- !u!114 &1241076150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6714,6 +6715,7 @@ MonoBehaviour:
   sceneChanger: {fileID: 398810728}
   currentLevelData:
     hexagonTypes: []
+    arrows: []
     time: 0
   achivement: 0
 --- !u!1 &1347574961

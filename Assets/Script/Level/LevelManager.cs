@@ -19,13 +19,14 @@ public class LevelManager : MonoBehaviour
             instance = this;
         }
 
-        //levelData.LoadDataJSON();
+        levelData.LoadDataJSON();
+        currentLevelIndex = levelData.GetCurrentLevelIndex();
     }
 
     public int currentLevelIndex;
 
     private void OnApplicationQuit()
     {
-        //levelData.SaveDataJSON();
+        levelData.SaveDataJSON();
     }
 }

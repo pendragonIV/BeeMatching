@@ -36,7 +36,7 @@ public class LevelData : ScriptableObject
     #region Save and Load
     public void SaveDataJSON()
     {
-        string content = JsonUtility.ToJson(this);
+        string content = JsonUtility.ToJson(this, true);
         WriteFile(content);
     }
 
@@ -82,6 +82,7 @@ public class LevelData : ScriptableObject
 public class Level
 {
     public HexagonType[] hexagonTypes;
+    public Arrow[] arrows;
     public float time;
 } 
 
@@ -99,6 +100,12 @@ public class Hexagon
     public Vector3Int spawnPosition;
 }
 
+[Serializable]
+public class Arrow
+{
+    public MoveDirection moveDirection;
+    public Vector3Int spawnPosition;
+}
 
 public static class JsonHelper
 {

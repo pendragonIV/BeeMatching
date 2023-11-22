@@ -34,6 +34,7 @@ public class ObjManager : MonoBehaviour
     public Dictionary<Vector3Int, GameObject> cantMovePos;
     public GameObject hexagonPrefab;
     public Sprite[] hexagonColors;
+    public GameObject rotateArrowPrefab;
 
     private void Start()
     {

@@ -44,7 +44,7 @@ public class SceneChanger : MonoBehaviour
         }
         else
         {
-            LevelManager.instance.currentLevelIndex = (int)Random.Range(4, LevelManager.instance.levelData.GetLevels().Length);
+            LevelManager.instance.currentLevelIndex = (int)Random.Range(8, LevelManager.instance.levelData.GetLevels().Length);
             StartCoroutine(ChangeScene(GAME));
         }
     }
